@@ -27,29 +27,3 @@
 // Examples
 
 // Primitive Data Types
-// Strings
-console.log("Strings Example");
-
-// Numbers
-
-// BigInt
-
-// Boolean
-
-// Null
-
-// Undefined
-
-//
-// Non-Primitive Data Types
-// Arrays []
-
-// Arrays - Array of Strings
-
-// Arrays - Array of Numbers
-
-// Arrays - Array of Strings, Numbers, Booleans, Null & Undefined
-
-// Object - Logging using log()
-
-// Objects {}
