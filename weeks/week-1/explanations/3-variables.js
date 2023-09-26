@@ -82,4 +82,6 @@ const movies = [
   },
 ];
 
-console.log(movies);
+
+// check lenght of an object
+console.log(Object.keys(movies).length);
