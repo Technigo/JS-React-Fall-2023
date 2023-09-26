@@ -24,12 +24,14 @@
 
 // log()  - registers or logs a message in the console
 // alert() - displays a message in the browser
+// prompt() - displays a dialog box that prompts the user for input
 // length - checks the length of a value
 
 // Your First JS Method
 
 // The all mighty log() method - console.log()
 // What is it?
+
 //Its a JavaScript method used to provides a way to log messages, debug code, and test out JavaScript expressions. It's like a command center where developers can see what's happening behind the scenes and diagnose any issues in their code.
 
 // Why do we use it?
@@ -42,8 +44,13 @@
 // We use this approach whenever we want to write a "string" to the console :)
 console.log("Hello world!");
 
-
 // Using Backticks ``
 // We use this approach whenever we want to write a "string" + experssions to the console :)
 // We will use this in the near future to mix both messages/strings and javascripts expressions :)
-console.log();
+
+const name = "Antonella"
+
+console.log(`Hello ${name}`);
+
+alert("Hello")
+prompt("What's your name?")

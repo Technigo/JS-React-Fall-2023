@@ -31,13 +31,10 @@
 
 // Examples
 
-
-
 // Example 03 - Using a simple condition with a number and multiple conditions
 // Let's say you're building a game where players earn points. You want to reward them differently based on their score.
 
 let score = 45;
-
 
 // Nested Conditionals
 // You can also put conditionals inside other conditionals. This helps your code make more complex decisions.
@@ -47,4 +44,3 @@ let isHungry = true;
 let hasMoney = false;
 
 console.log(isHungry);
-

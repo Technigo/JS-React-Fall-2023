@@ -10,6 +10,7 @@
 
 // Primitive Data Types:
 // Strings - Represents textual data
+
 // Number - An integer or a floating-point number
 // BigInt - An integer with arbitrary precision - is a special type of number that allows you to work with really, really big whole numbers.
 // Boolean - Any of two values: true or false
@@ -27,3 +28,98 @@
 // Examples
 
 // Primitive Data Types
+
+console.log("Strings Example");
+console.log("Coding is fun!");
+console.log(typeof "Coding is fun!");
+console.log("-------------------------");
+
+
+// Numbers
+
+console.log("Numbers Example");
+console.log(100);
+console.log(50.5);
+console.log(-4);
+console.log(typeof -4);
+console.log("-------------------------");
+
+
+// bigInt
+
+console.log("BigInt Example");
+console.log(900719925124740999n);
+console.log(typeof 900719925124740999n);
+console.log("-------------------------");
+
+
+// Boolean
+
+console.log("Boolean Example");
+console.log(true);
+console.log(false);
+console.log(typeof false);
+console.log("-------------------------");
+
+
+// undefined
+
+console.log("undefined Example");
+console.log(undefined);
+console.log(typeof undefined);
+console.log("-------------------------");
+
+
+
+// Non-primitive Data Types
+// arrays of strings
+
+// arrays = []
+
+console.log("Array of Strings Example");
+console.log(["Gothenburg", "Stockholm", "Malmö", "Uppsala"]);
+console.log("-------------------------");
+
+
+const swedishCities = ["Gothenburg", "Stockholm", "Malmö", "Uppsala"]
+console.log(swedishCities.length)
+
+
+// arrays of numbers
+
+console.log("Array of Numbers Example");
+console.log([8, 4, 5, 7, 9]);
+console.log("-------------------------");
+
+// arrays mixed
+
+console.log("Mixed Array Example");
+console.log(["Sweden", 8, true, undefined, null]);
+console.log("-------------------------");
+
+
+// objects
+// objects = {}
+
+console.log("Objects Example - Using log() method");
+
+const artist = {
+  name: "Freddie",
+  lastName: "Mercury",
+  countryOfBirth: "Tanzania",
+  age: 45,
+  singer: true,
+  labels: null,
+  totalOfAlbums: 14,
+  latestAlbum: "Innuendo",
+}
+
+console.log("artist", artist)
+console.log(artist.totalOfAlbums)
+
+
+// null value represents the intentional absence of any object value
+
+// undefined
+
+
