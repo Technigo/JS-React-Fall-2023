@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+section {
+  outline: 1px solid red;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+img {
+  width: 80%;
+}
+
+/* Custom Checkbox */
+/* Custom Checkbox Styles */
+.custom-checkbox {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 2px solid blue; /* Adding an outline when focused */
+}
+
+/* Hide the default checkbox appearance */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Normal Checkbox Styles */
+.normal-checkbox-label {
+  display: block;
+  margin-top: 10px;
+}
