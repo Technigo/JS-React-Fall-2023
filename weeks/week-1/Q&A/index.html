@@ -4,34 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Q&A - Week 1</title>
+    <link rel="stylesheet" href="./styles.css" />
+
   </head>
   <body>
     <section>
-      <p>Question:</p>
-      <p></p>
-      <p>Answer:</p>
+      <p class="header">Questison:</p>
       <p>
-        <a href="" target="_blank" rel="noopener noreferrer">See example</a>
+        When using promt to ask user for their name, should you use const or
+        let? Since the name is gonna change, it makes sense to use let. But the
+        promt message are always gonna be the same, so using const would also
+        make sense. It's just the input changing, right?
+      </p>
+      <p class="header">Answer:</p>
+      <p>
+        It depends!
+        When storing a value, we need to think what is the data that we need to save and use somewhere in the code, 
+        so in this case we need to be able to do something with the name (use in the greeting), therefore we need to think if the name will be a value that needs to be replaced or not, 
+        based on that we use let or const.<br/>
+    
+        <p style="font-weight: bold;">Use const when you can, and use let when you have to.</p>
+
+        This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.  <br/>
+
+        <br/>
+ 
+        <a href="https://jsfiddle.net/Anto_Nella/309kv17q/" target="_blank" rel="noopener noreferrer">See example</a>
       </p>
     </section>
 
     <section>
-      <p>Question:</p>
-      <p>Answer:</p>
+      <p class="header">Question:</p>
       <p>
-        <a href="" target="_blank" rel="noopener noreferrer">See example</a>
+        When we have pair or group assignments, do we use our partners / group mates or will they be assigned?
       </p>
+      <p class="header">Answer:</p>
+      <p>
+        You will be informed week by week. If it's a pair project, we will divide you in pairs and you will find all the info on Notion.          <br/>
+        <br/> Same if it's a group project, there will be a section with the name of the people involved in each project!
+      </p>
+      <br/>
     </section>
 
     <section>
-      <p>Question:</p>
-      <p>Answer:</p>
+      <p class="header">Question:</p>
       <p>
-        <a href="" target="_blank" rel="noopener noreferrer">See example</a>
+        When should I use <code>git push</code> and <code>git push origin master</code> in the terminal? <br/>
+        <br/> I weren't able to push the changes with <code>git push origin master</code> but with only <code>git push</code> it worked and I'm curious to know why :)
       </p>
+      <p class="header">Answer:</p>
+      <p>
+        You used the command <pre>git push origin master</pre> to try to push your code to a branch called <code >master</code>, but since your branch is called <code> main </code> you got an error. <br/>
+
+        <br/>
+        The commands <code>git push origin main</code> or just <code>git push</code> will work! <br/>
+        <br/><code>git push</code> assumes that you already have a remote repository defined for that branch. In this case, the default remote origin is used. 
+      </p>
+  
     </section>
 
     <script src="./input-validation.js"></script>
-    <link rel="stylesheet" href="./styles.css" />
   </body>
 </html>
