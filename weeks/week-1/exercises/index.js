@@ -5,6 +5,9 @@ Print out a greeting such as "Welcome to Technigo Cafe! What would you like to o
 Where Technigo Cafe is replaced by the name of your cafe that is stored in the variable.
 */
 
+const cafeName = "Technigo Cafe";
+console.log(`Welcome to ${cafeName}! What would you like to order today?`);
+
 /*
 2)
 Create a variable that stores the price of a coffee.
