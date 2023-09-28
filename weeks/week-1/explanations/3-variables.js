@@ -9,7 +9,6 @@
 // 3 Ways of declaring Variables in JS
 // They use JS reserved keywords
 
-
 // let - New School - PREFFERED
 // const - New School - PREFFERED
 
@@ -29,7 +28,7 @@ let lastName = "Bocelli";
 console.log(lastName);
 
 let role = "Singer";
-role = "Drummer"
+role = "Drummer";
 console.log(role);
 
 // Camel Case Convention
@@ -81,7 +80,6 @@ const movies = [
     year: 1999,
   },
 ];
-
 
 // check lenght of an object
 console.log(Object.keys(movies).length);
