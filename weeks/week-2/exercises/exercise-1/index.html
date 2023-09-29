@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Theme Switcher Exercise</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Hello hello</h1>
+    <div class="box">
+      <p>
+        This is a box with text that will change color when you toggle the theme
+        switch
+      </p>
+    </div>
+    <form>
+      <fieldset>
+        <legend>Select a theme</legend>
+
+        <div>
+          <input type="radio" id="dark" name="theme" value="dark" checked />
+          <label for="dark">Dark</label>
+        </div>
+
+        <div>
+          <input type="radio" id="light" name="theme" value="light" />
+          <label for="light">Light</label>
+        </div>
+
+        <div>
+          <input type="radio" id="crazy" name="theme" value="crazy" />
+          <label for="crazy">Crazy</label>
+        </div>
+      </fieldset>
+    </form>
+    <p>
+      Let's use some DOM manipulation to target the div container element with
+      the class of "box" and through some DOM manipulation lets change the
+      background color of this element once the user selects a theme from the
+      theme options.
+    </p>
+    <p>Stretch Goals</p>
+    <p>
+      If you're up for a bit of an extra challenge, you can take this exercise
+      to the next level by adding a super smooth transition effect to the color
+      changes. This is like adding a touch of magic! 😊 So, building on what
+      you've done so far, you can introduce a special CSS class called
+      .color-transition that makes the color change really smooth. When you pick
+      a theme, your JavaScript can make this class pop onto the .box element,
+      triggering that fancy transition you're aiming for. And guess what? After
+      a tiny pause, you can make the class disappear, making sure the smoothness
+      is just where you want it. It's like giving your project a stylish
+      makeover and showing off your knack for using advanced CSS tricks and
+      making the DOM dance a little.
+    </p>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
