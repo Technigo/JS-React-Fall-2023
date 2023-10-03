@@ -34,36 +34,39 @@ Functions play a crucial role in making your code organized, efficient, and reus
 // -----
 
 // How to Declare Functions:
-// There are two common ways to declare functions in JavaScript: function declarations and function expressions.
+// There are two common ways to declare functions in JavaScript: regular function declarations and function expressions.
 
 // Function Declaration
-/* A function declaration starts with the function keyword followed by the function name and a pair of parentheses. 
+
+/* A regular function declaration starts with the function keyword followed by the function name and a pair of parentheses. 
 The function body is enclosed in curly braces.
 
  */
+
+// Regular function
 function greet() {
   console.log("Hello! - GLOBAL SCOPE");
 }
 greet();
 
-// Function Expression
+// Function Expression or Arrow function
 // A function expression involves assigning an anonymous function to a variable. The variable then holds the function and can be used to call it.
 const greetExpression = () => {
   console.log("Hello! - expression");
 };
 greetExpression();
 
-// Pros and Cons of Function Expressions and Function Declarations
+// Pros and Cons of Function Expressions and Regular functions
 
-// Function Declarations
+// Regular functions
 // PROS:
-// - Hoisting: Function declarations are hoisted, which means they can be called before they are defined in the code. This allows you to place the function call anywhere in your code.
-// - Clarity: Function declarations often lead to clearer code due to their traditional structure. The function's name is directly associated with its purpose.
+// - Hoisting: Regular functions are hoisted, which means they can be called before they are defined in the code. This allows you to place the function call anywhere in your code.
+// - Clarity: Regular functions often lead to clearer code due to their traditional structure. The function's name is directly associated with its purpose.
 // - Simplicity: They are straightforward to use and read, making them a good choice for simpler functions.
 
 // CONS:
-// - Global Scope: Function declarations are added to the global scope, which can lead to potential naming conflicts and code pollution in larger applications.
-// - Order Dependency: Since function declarations are hoisted, their order of appearance in the code can affect the program's behavior, potentially leading to unexpected results.
+// - Global Scope: Regular functions are added to the global scope, which can lead to potential naming conflicts and code pollution in larger applications.
+// - Order Dependency: Since Regular functions are hoisted, their order of appearance in the code can affect the program's behavior, potentially leading to unexpected results.
 
 // Function Expressions:
 
@@ -73,7 +76,7 @@ greetExpression();
 // - Closures: Function expressions are often used to create closures, which allow access to variables from their containing scope even after that scope has finished executing.
 
 // CONS:
-// - Hoisting Issue: Unlike function declarations, function expressions are not hoisted, so they must be defined before they are called in the code.
+// - Hoisting Issue: Unlike Regular functions, function expressions are not hoisted, so they must be defined before they are called in the code.
 // - Readability: Function expressions can be more complex to read, especially when they are assigned to variables with less intuitive names.
 // - Debugging: Debugging function expressions might be more challenging since their variable name holds the function itself.
 
@@ -184,4 +187,6 @@ console.log("Student grade", studentGrade);
 
 //Summary:
 
-// In this lesson, we covered the basics of functions in JavaScript. We learned what functions are, why they are important, and how to declare them using function declarations and expressions. We also explored using parameters to make functions more flexible, responding to events with functions, and calling functions with arguments. Functions are a fundamental concept in programming, and mastering them will greatly enhance your ability to write efficient and organized code.
+// In this lesson, we covered the basics of functions in JavaScript. We learned what functions are, why they are important, and how to declare them using regular function declarations and expressions. We also explored using parameters to make functions more flexible, responding to events with functions, and calling functions with arguments. Functions are a fundamental concept in programming, and mastering them will greatly enhance your ability to write efficient and organized code.
+
+// Functions should be defined using the const functionName = () => {} syntax (not using the function keyword) - this rule is mainly just for consistency.
