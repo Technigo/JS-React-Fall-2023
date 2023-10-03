@@ -27,7 +27,6 @@ Functions play a crucial role in making your code organized, efficient, and reus
 // - Modularity: Functions allow you to break down complex tasks into smaller, manageable parts, making your code easier to understand and maintain.
 
 // - Abstraction: Functions hide the implementation details, focusing on what the function does rather than how it does it, which enhances code readability.
-greet();
 
 // -----
 // -----
@@ -41,9 +40,11 @@ greet();
 /* A function declaration starts with the function keyword followed by the function name and a pair of parentheses. 
 The function body is enclosed in curly braces.
 
- */function greet() {
+ */
+function greet() {
   console.log("Hello! - GLOBAL SCOPE");
 }
+greet();
 
 // Function Expression
 // A function expression involves assigning an anonymous function to a variable. The variable then holds the function and can be used to call it.
@@ -53,6 +54,7 @@ const greetExpression = () => {
 greetExpression();
 
 // Pros and Cons of Function Expressions and Function Declarations
+
 // Function Declarations
 // PROS:
 // - Hoisting: Function declarations are hoisted, which means they can be called before they are defined in the code. This allows you to place the function call anywhere in your code.
@@ -75,33 +77,106 @@ greetExpression();
 // - Readability: Function expressions can be more complex to read, especially when they are assigned to variables with less intuitive names.
 // - Debugging: Debugging function expressions might be more challenging since their variable name holds the function itself.
 
+// console.log(myDeclaredFunction()); // This works
+// console.log(myFunctionExpression()); // This will result in an error
+
+// function myDeclaredFunction() {
+//   return "I'm a declared function!";
+// }
+
+// const myFunctionExpression = function () {
+//   return "I'm a function expression!";
+// };
+
 // -----
 // -----
 // -----
 // -----
 
 // Functions with Parameters:
+// Parameters are placeholders for values that you can pass into a function to customize its behavior.
 
+function greetOneParam(name) {
+  console.log(`Hello ${name}!`);
+}
+
+greetOneParam("Nella");
+
+function greetTwoParam(name, lastName) {
+  console.log(`Hello ${name} ${lastName}!`);
+}
+greetTwoParam("Freddie", "Mercury");
 
 // Functions with Events:
+// You can use functions to respond to events, like when a button is clicked.
 
+// Using AddEventListener
+const button = document.querySelector("#myButton");
+
+const alertMe = () => {
+  alert("Button clicked through event listener");
+};
+
+// EASIER WAY BY BREAKING DOWN THE COMPLEXITY
+button.addEventListener("click", alertMe);
+
+// HARDER WAY TO WORK WITH THIS EVENTLISTENER
+// button.addEventListener("click", () => {
+//   alert("Button Click through event listener");
+// });
 
 // -----
 // -----
 // -----
 // -----
 
+// Inline dependency
+const showMessage = () => {
+  alert("Button clicked through inlineLogic");
+};
 
+// onClick Direct Event Handler
+const buttonTwo = document.getElementById("myButtonTwo");
+const showMessageTwo = () => {
+  alert("Button clicked through event handler");
+};
+buttonTwo.onclick = showMessageTwo;
 
+// Calling Functions with Arguments:
+// Arguments are the actual values you provide to a function when you call it.
+function add(a, b) {
+  return a + b;
+}
+const result = add(5, 3);
+console.log(result);
 // -----
 // -----
 // -----
 // -----
 
 // The Return Statement:
+// The return statement in a function specifies the value that the function will produce.
+// Take a look
 
+function calculateGrade(score) {
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 80) {
+    return "B";
+  } else if (score >= 70) {
+    return "C";
+  } else if (score >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
 
+const studentScore = 50;
+const studentGrade = calculateGrade(studentScore);
 
+console.log("Student score", studentScore);
+console.log("Student grade", studentGrade);
 // -----
 // -----
 // -----
