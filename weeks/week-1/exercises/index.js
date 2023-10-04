@@ -75,7 +75,7 @@ Print it out. => This should give you an error because it shouldn't be able to b
 
 const maxGuests = 10;
 console.log(maxGuests);
-maxGuests = "I also love rock n roll!";
+//maxGuests = "I also love rock n roll!";
 
 /*
 6)
