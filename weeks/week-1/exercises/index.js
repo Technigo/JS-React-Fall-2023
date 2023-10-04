@@ -21,7 +21,7 @@ Where 10 is replaced by the calculation of the total price.
 
 // Good practice Approach
 
-let coffeePrice = 335; 
+let coffeePrice = 335;
 // Aparently super expensive coffee!
 
 const numberOfCoffees = 10;
