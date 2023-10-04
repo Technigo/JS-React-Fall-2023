@@ -98,7 +98,7 @@ console.log("----");
     */
 console.log("Iteration 05");
 const calculationTest = (num1, num2) => {
-  let calculationRespons = Number(prompt(`What is ${num1} * ${num2}`));
+  let calculationRespons = parseInt(prompt(`What is ${num1} * ${num2}`));
   let rightAnswer = num1 * num2;
   if (calculationRespons === rightAnswer) {
     alert("Yay! Correct");
@@ -116,7 +116,7 @@ console.log("----");
   */
 console.log("Iteration 06");
 const calculationRandomNum = (num1, num2) => {
-  let calculationRespons = Number(prompt(`What is ${num1} * ${num2}`));
+  let calculationRespons = parseInt(prompt(`What is ${num1} * ${num2}`));
   let rightAnswer = num1 * num2;
 
   if (calculationRespons === rightAnswer) {
