@@ -21,7 +21,7 @@ Where 10 is replaced by the calculation of the total price.
 
 // Good practice Approach
 
-let coffeePrice = 335; 
+let coffeePrice = 335;
 // Aparently super expensive coffee!
 
 const numberOfCoffees = 10;
@@ -75,7 +75,7 @@ Print it out. => This should give you an error because it shouldn't be able to b
 
 const maxGuests = 10;
 console.log(maxGuests);
-//maxGuests = "I also love rock n roll!";
+maxGuests = "I also love rock n roll!";
 
 /*
 6)
