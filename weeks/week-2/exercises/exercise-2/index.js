@@ -55,6 +55,7 @@ console.log("----");
   Add as many conditonals as you want.
   */
 console.log("Iteration 04");
+console.log("---- Version 01");
 console.log("Using if-else-if-else statements");
 const tellMeYourAge = () => {
   let userAge = prompt("How old are you?");
@@ -70,24 +71,71 @@ const tellMeYourAge = () => {
 // tellMeYourAge();
 
 console.log("Using switch statements");
+console.log("---- Version 02");
 const tellMeYourAgeSwitch = () => {
-  let userAge = prompt("How old are you?");
+  let userAge = parseInt(prompt("How old are you?"));
   switch (true) {
-    case userAge <= 35:
+    case 18:
       console.log(`wow you are ${userAge}! that's young!`);
       break;
-    case userAge > 35:
-    case userAge <= 60:
+    case userAge >= 19 && userAge <= 30:
+      console.log(`wow you are ${userAge}! that's swell!`);
+      break;
+    case userAge >= 31 && userAge <= 80:
       console.log(`wow you are ${userAge}! that's awesome!`);
       break;
     default:
-      return;
+      console.log(`Sit back and relax!`);
+      break;
   }
 };
 // tellMeYourAgeSwitch();
 
 console.log("----");
 
+console.log("---- Version 03");
+console.log("Using a ternary operator");
+const tellMeYourAgeTernary = () => {
+  let userAge = parseInt(prompt("How old are you?"));
+
+  userAge === 18
+    ? console.log(`wow you are ${userAge}! that's young!`)
+    : userAge >= 19 && userAge <= 30
+    ? console.log(`wow you are ${userAge}! that's swell!`)
+    : userAge >= 31 && userAge <= 80
+    ? console.log(`wow you are ${userAge}! that's awesome!`)
+    : console.log("Sit back and relax!");
+};
+// tellMeYourAgeTernary();
+
+console.log("---- Version 04");
+console.log("Using if-else-if-else statements with typeChecking");
+const tellMeYourAgeValidation = () => {
+  let userAge = prompt("How old are you?");
+
+  // Check if userAge is valid number
+  if (isNaN(userAge)) {
+    console.log("Invalid input. Please enter a number.");
+    alert("Invalid input. Please enter a number.");
+    tellMeYourAgeValidation();
+    return;
+  }
+
+  // Converting string to number
+  parseInt(userAge);
+
+  if (userAge === 18) {
+    console.log(`wow you are ${userAge}! that's young!`);
+  } else if (userAge >= 19 && userAge <= 30) {
+    console.log(`wow you are ${userAge}! that's swell!`);
+  } else if (userAge >= 31 && userAge <= 80) {
+    console.log(`wow you are ${userAge}! that's awesome!`);
+  } else {
+    console.log("Sit back and relax!");
+  }
+};
+tellMeYourAgeValidation();
+console.log("----");
 /*
     5)
     In this function we want to give the user a mathematical calculation to 
@@ -125,8 +173,8 @@ const calculationRandomNum = (num1, num2) => {
     alert(`Noooo, the answer is ${rightAnswer}`);
   }
 };
-calculationRandomNum(
-  Math.floor(Math.random() * 10),
-  Math.floor(Math.random() * 10)
-) + 1;
+// calculationRandomNum(
+//   Math.floor(Math.random() * 10),
+//   Math.floor(Math.random() * 10)
+// ) + 1;
 console.log("----");
