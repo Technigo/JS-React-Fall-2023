@@ -98,7 +98,7 @@ console.log("----");
     */
 console.log("Iteration 05");
 const calculationTest = (num1, num2) => {
-  let calculationRespons = prompt(`What is ${num1} * ${num2}`);
+  let calculationRespons = Number(prompt(`What is ${num1} * ${num2}`));
   let rightAnswer = num1 * num2;
   if (calculationRespons === rightAnswer) {
     alert("Yay! Correct");
@@ -106,8 +106,7 @@ const calculationTest = (num1, num2) => {
     alert(`Noooo, the answer is ${rightAnswer}`);
   }
 };
-calculationTest(2, 4);
-
+// calculationTest(2, 4);
 console.log("----");
 
 /*
@@ -115,3 +114,19 @@ console.log("----");
   Make the calculation machine we just made show random calculations everytime you invoke the function.
   But hey, maybe limit the randomness to be numbers between 0-10?
   */
+console.log("Iteration 06");
+const calculationRandomNum = (num1, num2) => {
+  let calculationRespons = Number(prompt(`What is ${num1} * ${num2}`));
+  let rightAnswer = num1 * num2;
+
+  if (calculationRespons === rightAnswer) {
+    alert("Yay! Correct");
+  } else {
+    alert(`Noooo, the answer is ${rightAnswer}`);
+  }
+};
+calculationRandomNum(
+  Math.floor(Math.random() * 10),
+  Math.floor(Math.random() * 10)
+) + 1;
+console.log("----");
