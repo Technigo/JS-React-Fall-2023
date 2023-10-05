@@ -77,11 +77,11 @@ console.log("Traversing the DOM");
 const parentElement = byId.parentNode;
 console.log(parentElement);
 
-const firstChild = parentElement.firstChild;
-console.log(firstChild);
+const firstChild = parentElement.firstElementChild;
+console.log("first child", firstChild);
 
-const nextSibling = byId.nextSibling;
-console.log(nextSibling);
+const nextSibling = byId.nextElementSibling;
+console.log("next sibling", nextSibling);
 // -----
 // -----
 // -----
@@ -93,11 +93,10 @@ console.log(nextSibling);
 const newDiv = document.createElement("div");
 parentElement.appendChild(newDiv);
 
-
 // add new item to a list
 const newLi = document.createElement("li");
 const ulElement = document.getElementById("list");
-newLi.innerText = "Item 5"
+newLi.innerText = "Item 5";
 ulElement.appendChild(newLi);
 
 // -----

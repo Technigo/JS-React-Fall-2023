@@ -1,0 +1,36 @@
+h1 {
+  font-family: Georgia;
+}
+
+p {
+  font-size: 20px;
+}
+
+#filterDropdown {
+  margin-bottom: 14px;
+}
+
+#container {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.card {
+  min-height: 450px;
+  width: 200px;
+  vertical-align: text-top;
+  background: rgb(241, 193, 193);
+  border-radius: 16px;
+  border: 2px solid rgb(222, 157, 157);
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  margin: 12px 0;
+}
+
+.card p {
+  font-family: Arial;
+}
