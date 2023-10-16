@@ -33,83 +33,32 @@ It's commonly used in web development to interact with APIs (Application Program
 
 // API example https://www.boredapi.com/
 
-const URL = "http://www.boredapi.com/api/activity";
+// Store the url in a variable
+const URL = "https://www.boredapi.com/api/activity";
 
 const container = document.getElementById("activity");
 
-const callApi = () =>
+const callApi = () => {
   fetch(URL)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error("Network response failed");
       }
-      return response.json(); // Parse response as JSON
+      return response.json();
     })
     .then((data) => {
-      // Use the data retrieved from the server
-      container.innerText = data.activity;
       console.log(data);
+      container.innerHTML = data.activity;
     })
     .catch((error) => {
-      // Handle errors, such as network issues or invalid responses
-      container.innerText = error;
-      console.error("Fetch error:", error);
+      console.log("Fetch error: " + error);
     });
-
-// callApi();
-
-const fetchData = async () => {
-  try {
-    // Handle the response data here
-    const response = await fetch(URL);
-    const data = await response.json();
-    container.innerText = data.activity;
-    console.log(data);
-  } catch (error) {
-    container.innerText = error;
-  }
 };
 
+callApi();
 // fetchData();
 
-const fetchActivity = () => {
-  return fetch(URL)
-    .then((res) => res.json())
-    .then((data) => {
-      //inject HTML
-      container.innerText = data.activity;
-      console.log(data);
-      return data;
-    })
-    .catch((error) => {
-      container.innerText = error;
-      console.log("Error:", error);
-    }); //remove first letter in URL to showcase
-};
-
-
-
-const fetchActivityData = async () => {
-  const response = await fetch(URL);
-  const data = await response.json();
-  container.innerText = data.activity;
-  console.log(data);
-};
-
-// fetchActivityData()
 // only the code within the then() and catch() method is executed after
-
-// To access the returned object from an API call
-
-fetchActivity()
-  .then((data) => {
-    // Now you can access the API response object stored in `apiData`
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
-
 
 console.log("Talking about APIs and Promises");
 
