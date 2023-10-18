@@ -1,7 +1,7 @@
+import { Atmosphere } from "./Atmosphere";
+import { Description } from "./Description";
+import { Moons } from "./Moons";
 import "./Planet.css";
-import { Moons } from "../Moons";
-import { Atmosphere } from "../Atmosphere";
-import { Description } from "../Description";
 
 export const Planet = ({
   name,

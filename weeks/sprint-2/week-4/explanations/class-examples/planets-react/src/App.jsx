@@ -1,4 +1,4 @@
-import { Header } from "./components/Header";
+import { Header } from "./components/Common/Header";
 import { Planet } from "./components/Planet/Planet";
 import data from "./data.json";
 
