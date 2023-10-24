@@ -1,50 +1,52 @@
 import { Header } from "./components/Common/Header";
+import { ControlledFormExample } from "./components/Example";
 import { Planet } from "./components/Planet/Planet";
 import data from "./data.json";
 
 const App = () => {
-  const planets = data.planets;
-  /* NOT DESTRUCTURED */
-  /* const renderPlanets = () => planets.map((planet) => {
-      return <Planet
-      key={planet.id}
-      name={planet.name}
-      diameter={planet.diameter}
-      distanceFromTheSun={planet.distanceFromTheSun}
-      moons={planet.moons}
-      atmosphere={planet.atmosphere}
-      description={planet.description}
-    />;
-}) */
+  const { planets } = data;
+  const earth = planets.filter((planet) => planet.name === "Earth");
+  const otherPlanets = planets.filter((planet) => planet.name !== "Earth");
 
-  /* DESTRUCTURED */
-  const renderPlanets = () =>
-    planets.map(
-      ({ id, name, diameter, distance, moons, atmosphere, description }) => (
-        <Planet
-          key={id}
-          name={name}
-          diameter={diameter}
-          distance={distance}
-          moons={moons}
-          atmosphere={atmosphere}
-          description={description}
-        />
-      )
-    );
+  const renderPlanet = ({
+    id,
+    name,
+    diameter,
+    distanceFromTheSun,
+    moons,
+    atmosphere,
+    description,
+  }) => (
+    <Planet
+      key={id}
+      name={name}
+      diameter={diameter}
+      distanceFromTheSun={distanceFromTheSun}
+      moons={moons}
+      atmosphere={atmosphere}
+      description={description}
+    />
+  );
 
-  const renderContent = renderPlanets();
+  const renderEarth = earth.map(renderPlanet);
+  const renderPlanets = otherPlanets.map(renderPlanet);
 
   return (
-    <div className="App">
+    <div className="wrapper">
+      <ControlledFormExample />
       <Header />
-      <section className="planetOuter">{renderContent}</section>
+      <div className="container">
+        <section className="planetOuter">
+          <p className="title">🪐 Other planets</p>
+          {renderPlanets}
+        </section>
+        <section className="planetOuter">
+          <p className="title">🌎 Earth</p>
+          {renderEarth}
+        </section>
+      </div>
     </div>
   );
 };
 
 export default App;
-
-/*Extra!
-Feel free to create more components, such as header/footer,
-or why not include some more data from the array? */

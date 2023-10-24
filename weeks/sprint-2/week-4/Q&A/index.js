@@ -1,5 +1,4 @@
 // In JavaScript, you can convert a Unix timestamp to a human-readable date and time using the Date object.
-// Here's how you can do it:
 
 // Unix is a unit expressed in seconds
 /* Unix timestamps are used to represent a point in time as the number of seconds that have elapsed 
@@ -51,6 +50,7 @@ const data = {
 };
 
 //Gives us the time in "human" form (as a date), mult. by 1000 to get it in ms.
+
 /* Make sure to multiply the Unix timestamp by 1000 to convert it from seconds to milliseconds 
 because JavaScript's Date object works with timestamps in milliseconds.
 
@@ -61,11 +61,13 @@ toLocaleString method to format the date and time accordingly.
  */
 
 // Get sunrise time with the city's timezone
+
 // Gives us the time in "human" form (as a date), mult. by 1000 to get it in ms.
 const sunriseTime = new Date((data.sys.sunrise + data.timezone) * 1000);
+console.log(sunriseTime);
 
 // sets the minutes of the sunriseTime to the new value
-const sunriseTimeLocale = sunriseTime.setMinutes(
+sunriseTime.setMinutes(
   // .getMinutes() returns the current minutes of the sunriseTime.
 
   // Calculates the new minute value by adding the current minutes to the timezone offset.
@@ -95,7 +97,6 @@ This adjustment is often necessary when working with time data from different ti
 ensuring that the displayed time is accurate for the user's location.
  */
 
-
 // sydney sunrise
 const sydneySunrise = new Date((1697569852 + 39600) * 1000);
 const sydneySunriseLocale = sydneySunrise.setMinutes(
@@ -106,4 +107,4 @@ const sydneySunriseShort = sydneySunrise.toLocaleTimeString(["en-GB"], {
   timeStyle: "short",
 });
 
-console.log("sydeny", sydneySunriseShort)
+console.log("sydney", sydneySunriseShort);

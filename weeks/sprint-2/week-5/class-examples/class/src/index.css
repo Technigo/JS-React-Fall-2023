@@ -1,0 +1,50 @@
+.lightbulb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.lightbulb {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.bulb {
+  background-color: #fff;
+  z-index: 99999;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+    inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.lightbulb.on {
+  background-color: #ffd700;
+}
+
+.lightbulb.on .bulb {
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.lightbulb.off {
+  filter: brightness(50%);
+}
+
+.lightbulb.off .bulb {
+  box-shadow: none;
+}
+
+.multi-step-form {
+  margin: 1em 0;
+}
