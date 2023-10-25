@@ -23,6 +23,19 @@ export const Data = () => {
     console.log("Default function")
   );
 
+  const changeUserAge = () => {
+    const updatedUsers = users.map((user) => {
+      if (user.name === "Alice") {
+        // Create a new object with the updated age
+        return { ...user, age: 26 };
+      }
+      return user;
+    });
+
+    // Update the state with the new array
+    setUsers(updatedUsers);
+  };
+
   return (
     <div className="data">
       {/* Number */}
@@ -76,6 +89,7 @@ export const Data = () => {
             </li>
           ))}
         </ul>
+        <button onClick={() => changeUserAge()}>Change User Age</button>
         <button
           onClick={() => setUsers([...users, { name: "Charlie", age: 35 }])}
         >
