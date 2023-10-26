@@ -1,0 +1,112 @@
+.card {
+  height: 372px;
+  width: 371px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+
+  // margin in between more than 1 card
+  margin: 20px;
+
+  // for clicked card
+  overflow: hidden;
+  position: relative;
+}
+
+.card {
+  .top {
+    box-sizing: border-box;
+    height: 126px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 20px 30px;
+    align-items: center;
+  }
+}
+
+.title {
+  margin: 0;
+  font-family: "Roboto";
+  // h1 has a weight bold
+  font-weight: normal;
+  font-size: 70px;
+}
+
+.card .bottom {
+  box-sizing: border-box;
+  height: 246px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.card {
+  .emoji {
+    font-size: 70px;
+  }
+}
+
+.subTitle {
+  margin: 0;
+  font-size: 36px;
+  font-style: italic;
+  font-family: "Lora";
+  font-weight: normal;
+  line-height: 47px;
+  text-align: center;
+}
+
+.card {
+  button {
+    height: 50px;
+    width: 311px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 18px;
+  }
+  cursor: pointer;
+}
+
+/* Styling for the "clicked card" */
+.clickedCard {
+  .top,
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    transition: 1s;
+  }
+  /* The difference on top and bottom parts*/
+  .top {
+    top: 0;
+  }
+  .bottom {
+    bottom: 0;
+  }
+}
+
+.clickedCard {
+  .top:hover,
+  .bottom:hover {
+    transition: 1s;
+    height: 100%;
+    z-index: 99;
+  }
+
+  .top:hover {
+    top: 0;
+  }
+
+  .bottom:hover {
+    bottom: 0;
+  }
+}

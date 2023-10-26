@@ -1,6 +1,6 @@
-import "./App.css";
+import "./App.scss";
+import { MultiStepForm } from "./components/Multistep/MultiStepForm";
 // import { Data } from "./dataTypes/Data";
-// import { MultiStepForm } from "./Multistep/MultistepForm"
 
 function App() {
   /*   const [count, setCount] = useState(0);
@@ -17,7 +17,7 @@ function App() {
 
       {/* <Data/> */}
 
-      {/* {<MultiStepForm />} */}
+      <MultiStepForm />
     </>
   );
 }

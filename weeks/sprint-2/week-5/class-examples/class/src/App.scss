@@ -9,12 +9,16 @@
   text-align: center;
 }
 
-.card {
-  padding: 2em;
-}
+.wrapper {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: space-around;
 
-.read-the-docs {
-  color: #888;
+  div {
+    margin: 10px;
+  }
 }
 
 h1 {
