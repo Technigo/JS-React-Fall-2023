@@ -1,0 +1,27 @@
+.dogCard {
+  padding: 2em;
+  border: 1px solid rgb(145, 71, 255);
+  margin: 1em 0;
+
+  .btn {
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 13px;
+    height: 30px;
+    background-color: rgb(145, 71, 255);
+    color: white;
+    padding: 0 10px;
+
+    &:hover {
+      background-color: rgb(96, 58, 153);
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
