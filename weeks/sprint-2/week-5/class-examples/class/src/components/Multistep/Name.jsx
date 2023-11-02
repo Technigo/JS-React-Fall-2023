@@ -1,16 +1,16 @@
 // It receives two props: `value` and `updateFormData`.
 export const Name = ({ value, updateFormData }) => {
-  
   const userName = (e) => updateFormData("name", e.target.value);
 
   return (
     <div>
-      <label>Name:</label>
-      <input type="text" value={value} onChange={userName} />
+      <label>
+        Name:
+        <input type="text" value={value} onChange={userName} />
+      </label>
     </div>
   );
 };
-
 
 /* The provided code defines a React component named `Name`. 
 This component is designed for capturing and displaying a user's name. Let me explain what this code does step by step:

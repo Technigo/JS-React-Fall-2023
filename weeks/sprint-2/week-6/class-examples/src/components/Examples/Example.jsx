@@ -85,7 +85,7 @@ export const Example = () => {
 
   return (
     <div>
-      <h3>Example of useEffect Hook</h3>
+      <h2>Example of useEffect Hook</h2>
       <p>The window width size is currently: {windowWidth}</p>
       <input
         type="text"

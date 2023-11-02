@@ -58,7 +58,9 @@ export const ExampleFour = () => {
             <div className="quantity">
               <span>x</span>
               <input
+                aria-label="Quantity"
                 type="number"
+                name="quantity"
                 value={item.quantity}
                 onChange={(e) =>
                   handleQuantityChange(item.id, parseInt(e.target.value))
