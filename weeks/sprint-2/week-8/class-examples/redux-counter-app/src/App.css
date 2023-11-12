@@ -1,0 +1,10 @@
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: fit-content;
+}
+
