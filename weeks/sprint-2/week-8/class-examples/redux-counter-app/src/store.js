@@ -1,11 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./reducers/counterSlice";
 
-const store = configureStore({
-  reducer: {
-    // name your reducer `counterReducer` like you want
-    counter: counterReducer,
-  },
+// The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.
+const reducer = combineReducers({
+   // name your reducer `counterReducer` like you want
+  counter: counterReducer,
 });
 
-export default store;
+export const store = configureStore({
+  reducer: reducer,
+});
