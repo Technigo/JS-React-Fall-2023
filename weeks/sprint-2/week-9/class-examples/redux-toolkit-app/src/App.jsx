@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import "./App.scss";
 import CartContainer from "./components/CartContainer";
 import { Modal } from "./components/Modal";
 import { NavBar } from "./components/NavBar";
@@ -20,7 +21,7 @@ export const App = () => {
 
   if (isLoading) {
     return (
-      <div className="loading">
+      <div className="Loading">
         <h1>Loading...</h1>
       </div>
     );
@@ -30,7 +31,7 @@ export const App = () => {
     <main>
       {isOpen && <Modal />}
       <NavBar />
-      <CartContainer />
+      <CartContainer noPadding />
     </main>
   );
 };

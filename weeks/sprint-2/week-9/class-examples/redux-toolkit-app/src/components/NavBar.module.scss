@@ -1,0 +1,60 @@
+.NavBar {
+  background: var(--primary);
+  padding: 1.25rem 2rem;
+
+  h3 {
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+
+  svg {
+    width: 40px;
+    color: var(--white);
+  }
+
+  &.LightBackground {
+    background-color: lightcyan;
+
+    h3 {
+      color: var(--primary);
+    }
+
+    svg {
+      color: var(--primary);
+    }
+  }
+}
+
+.NavCenter {
+  max-width: var(--fixed-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .NavContainer {
+    display: block;
+    position: relative;
+  }
+
+  .AmountContainer {
+    position: absolute;
+    top: -0.6rem;
+    right: -0.6rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .TotalAmount {
+    color: var(--white);
+    margin-bottom: 0;
+    font-size: 1.25rem;
+  }
+}

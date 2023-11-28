@@ -1,0 +1,62 @@
+// CSS Modules let you use the same CSS class name in different files without worrying about naming clashes
+
+.CartContainer {
+  padding: 25px;
+
+  .Cart {
+    min-height: calc(100vh - 120px);
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 2.5rem 0;
+    max-width: var(--fixed-width);
+  }
+  
+  .Cart h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .EmptyCart {
+    text-transform: lowercase;
+    color: var(--grey-5);
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .Cart footer {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .CartTotal h4 {
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .ClearBtn {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    color: var(--red-dark);
+    border: 1px solid var(--red-dark);
+    margin-top: 2.25rem;
+    border-radius: var(--radius);
+  }
+  
+  .ClearBtn:hover {
+    background: var(--red-light);
+    color: var(--red-dark);
+    border-color: var(--red-light);
+  }
+
+  &.NoPadding {
+    padding: 0;
+  }
+}
+
+
+
+
